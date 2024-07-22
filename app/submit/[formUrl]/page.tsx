@@ -1,6 +1,6 @@
 import { getFormContentByUrl } from "@/actions/getFormContentByUrl"
 import FormSubmitComponent from "@/components/form-submit-component"
-import { FormElementInstance } from "@/components/fields/textField"
+import { FormElementInstance } from "@/components/form/form-elements"
 
 const SubmitFormPage = async({params}:{params:{formUrl:string}}) => {
 
