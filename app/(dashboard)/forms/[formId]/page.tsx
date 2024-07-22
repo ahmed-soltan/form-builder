@@ -3,10 +3,8 @@ import { getFormWithSubmissions } from "@/actions/getFormWithSubmissions";
 import DeleteFormBtn from "@/components/buttons/delete-form-btn";
 import VisitBtn from "@/components/buttons/visits-btn";
 import FormShareLink from "@/components/form-share-link";
-import {
-  ElementsType,
-  FormElementInstance,
-} from "@/components/fields/textField";
+import { ElementsType, FormElementInstance } from "@/components/form/form-elements";
+
 import StatesCard from "@/components/formStatus/states-card";
 import {
   Table,
@@ -106,7 +104,9 @@ type Row = {
 } & {
   submittedAt: Date;
 };
-export const SubmissionsTable = async ({ id }: { id: number }) => {
+
+
+const SubmissionsTable = async ({ id }: { id: number }) => {
   const form = await getFormWithSubmissions(id);
 
   console.log(form);
